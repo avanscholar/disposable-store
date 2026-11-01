@@ -17,7 +17,7 @@ export function CartPage() {
   const weight = useMemo(() => items.reduce((sum, item) => sum + item.product.weightKg * item.quantity, 0), [items]);
   const shipping = calculateShipping(zone, weight, subtotal);
   const total = subtotal + shipping;
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "15551234567";
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919711716454";
   const whatsappText = encodeURIComponent(`Hello! I would like to place this order:\n${items.map((item) => `• ${item.quantity} × ${item.product.name} — ${formatCurrency(getUnitPrice(item.product, item.quantity) * item.quantity)}`).join("\n")}\nShipping zone: ${zone}\nEstimated total: ${formatCurrency(total)}`);
 
   async function checkout() {
