@@ -50,6 +50,10 @@ main { min-height:65vh; }
 .section h2,.wholesale-section h2 { margin:10px 0 8px; font:800 clamp(30px,3vw,44px)/1.1 var(--font-heading); letter-spacing:-1.7px; }
 .section-heading p,.page-heading p { margin:0; color:var(--muted); }
 .catalog-tools { display:flex; align-items:center; gap:22px; margin-bottom:30px; }
+.catalog-notice { display:flex; justify-content:space-between; gap:20px; margin-bottom:18px; padding:14px 16px; border:1px solid #efd8a6; border-radius:12px; background:#fff8e7; color:#765a1c; font-size:12px; }
+.catalog-notice span { color:#8b7139; }
+.load-more { display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:36px; }
+.load-more span { color:var(--muted); font-size:11px; }
 .search-box { flex:1; height:48px; display:flex; align-items:center; gap:10px; padding:0 15px; border:1px solid var(--line); border-radius:12px; background:white; }
 .search-box:focus-within { border-color:var(--green); box-shadow:0 0 0 3px rgba(31,107,83,.1); }
 .search-box input { width:100%; border:0; outline:0; background:transparent; color:var(--ink); }

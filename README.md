@@ -1,6 +1,6 @@
 # EcoServe Supply
 
-A production-oriented storefront for disposable and foodservice products. It includes catalog search, persistent cart, automatic wholesale pricing, delivery-zone shipping, Stripe Checkout, WhatsApp ordering, Supabase customer accounts, order webhooks, and an admin inventory dashboard.
+A production-oriented storefront with 119 disposable and foodservice products. It includes catalog search, category filtering, persistent cart, automatic wholesale pricing, delivery-zone shipping, Stripe Checkout, WhatsApp ordering, Supabase customer accounts, order webhooks, and an admin inventory dashboard.
 
 ## Stack
 
@@ -36,7 +36,7 @@ Add one or more comma-separated account emails to `ADMIN_EMAILS`. After signing 
 
 ## Important production checks
 
-- Replace all sample products and contact details.
+- Review every temporary INR price, stock quantity, product image, and contact detail.
 - Confirm tax, returns, privacy, and shipping policies for the jurisdictions where you sell.
 - Test Stripe in test mode before enabling live keys.
 - Add your domain to Supabase Auth redirect URLs.

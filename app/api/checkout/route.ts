@@ -26,10 +26,10 @@ export async function POST(request: Request) {
       mode: "payment",
       allow_promotion_codes: true,
       billing_address_collection: "required",
-      shipping_address_collection: { allowed_countries: ["US"] },
+      shipping_address_collection: { allowed_countries: ["IN"] },
       line_items: [
-        ...validated.map(({ product, quantity }) => ({ quantity, price_data: { currency: "usd", unit_amount: Math.round(getUnitPrice(product, quantity) * 100), product_data: { name: product.name, description: `${product.packSize} pieces per ${product.unitLabel}`, metadata: { productId: product.id } } } })),
-        ...(shipping ? [{ quantity: 1, price_data: { currency: "usd", unit_amount: Math.round(shipping * 100), product_data: { name: `${zone[0].toUpperCase()}${zone.slice(1)} shipping` } } }] : []),
+        ...validated.map(({ product, quantity }) => ({ quantity, price_data: { currency: "inr", unit_amount: Math.round(getUnitPrice(product, quantity) * 100), product_data: { name: product.name, description: `${product.packSize} pieces per ${product.unitLabel}`, metadata: { productId: product.id } } } })),
+        ...(shipping ? [{ quantity: 1, price_data: { currency: "inr", unit_amount: Math.round(shipping * 100), product_data: { name: `${zone[0].toUpperCase()}${zone.slice(1)} shipping` } } }] : []),
       ],
       metadata: { zone, cart: JSON.stringify(validated.map(({ product, quantity }) => ({ productId: product.id, quantity }))) },
       success_url: `${siteUrl}/account?checkout=success`,

@@ -22,7 +22,7 @@ create table if not exists public.orders (
 create table if not exists public.order_items (
   id bigint generated always as identity primary key,
   order_id uuid not null references public.orders(id) on delete cascade,
-  product_id text not null references public.products(id),
+  product_id text not null,
   quantity integer not null check (quantity > 0)
 );
 
